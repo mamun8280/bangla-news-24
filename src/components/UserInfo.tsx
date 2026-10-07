@@ -1,8 +1,9 @@
 "use client"
 
 import { authClient } from "@/lib/auth-client";
-import Image from "next/image";
+
 import Link from "next/link";
+import Image from "next/image";
 
 
 const UserInfo = () => {
@@ -14,13 +15,17 @@ const UserInfo = () => {
     }
 
     return (
-        <div className="absolute right-0 flex items-center gap-4 hidden md:flex">
+        <div className="absolute right-0 items-center gap-4 hidden md:flex">
             {
                 user ? <div className="flex flex-col items-center ">
                         <div className="avatar">
                             <div className="ring-primary ring-offset-base-100 w-10 mt-5 rounded-full ring-2 ring-offset-2">
-                                <img alt="Tailwind-CSS-Avatar-component" 
-                                src= {user?.image  as string} />
+                                <img
+                                    alt="Tailwind-CSS-Avatar-component"
+                                    src={user?.image as string}
+                                    width={40}
+                                    height={40}
+                                />
                             </div>
                             </div>
                             <h2 className="mt-2 text-xl text-blue-500">{user.name}</h2>
