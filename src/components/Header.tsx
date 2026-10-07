@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import NavLinks from './NavLinks';
+import UserInfo from './UserInfo';
 
 const Header = () => {
   const date = new Date().toLocaleDateString("bn-BD", {
@@ -31,14 +32,8 @@ const Header = () => {
         </div>
 
         {/* ডানপাশের বাটন (md:absolute দিয়ে লোগোর সমান্তরালে ডানে রাখা হয়েছে) */}
-        <div className="absolute right-0 flex items-center gap-4 hidden md:flex">
-          <button className="text-sm font-semibold text-gray-600 hover:text-red-700 transition">
-            সাইন ইন
-          </button>
-          <button className="bg-red-700 text-white text-xs font-semibold px-4 py-2 rounded hover:bg-red-800 transition">
-            সাইন আপ
-          </button>
-        </div>
+        
+        <UserInfo />
 
       </div>
 
